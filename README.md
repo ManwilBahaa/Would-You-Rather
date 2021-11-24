@@ -3,7 +3,15 @@ This is a React/Redux front end for the application. created using the [Create R
 
 a web app that lets a user play the “Would You Rather?” game. The game goes like this: A user is asked a question in the form: “Would you rather [option A] or [option B] ?”. Answering "neither" or "both" is against the rules.
 
-In your app, users will be able to answer questions, see which questions they haven’t answered, see how other people have voted, post questions, and see the ranking of users on the leaderboard.
+## Installation
+ <ol>
+      <li>once youve cloned the files open command line in the file directory by using : </li>
+         <code>> cd '{FILE_PATH}'</code>
+      <li>run command</li>
+        <code>> npm install</code>
+      <li>Once all the required files are installed you can then start by running:</li>
+        <code>> npm start</code>
+    </ol>
 
 ## Login Flow
 We always want to make sure we know who the logged in user is, so information about the logged in user should appear on the page. If someone tries to navigate anywhere by entering the address in the address bar, the user is asked to sign in and then the requested page is shown. The application allows the user to log out and log back in
