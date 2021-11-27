@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import React , { Component, Fragment } from 'react'
 import Nav from "./nav"
 import { handelSaveAnswer } from '../actions/questions'
-import { Link } from 'react-router-dom'
+import Login from './Login'
 class PoolView extends Component {
   state={
     answer:null
@@ -21,11 +21,7 @@ if(this.props.noUser!==true){
       <Fragment>
         {
         this.props.noUser===true ? 
-        <p className='text-center'>
-        <Link to='/'>
-        login first
-        </Link>
-        </p>:
+        <Login/>:
         <Fragment>
       <div>
         <Fragment>
@@ -161,29 +157,29 @@ function mapStateToProps ({ users ,questions ,authedUser}) {
     }
   }else{
   
-  if(authedUser!==''){
-  let QId=window.location.pathname.slice(10,)
-  let viewPoolResults 
-  let option = null
-  
-  if(Object.keys(users[authedUser].answers).includes(QId)){
-    viewPoolResults=true
-    option=users[authedUser].answers[QId]
-    console.log(option)
+      if(authedUser!==''){
+      let QId=window.location.pathname.slice(10,)
+      let viewPoolResults 
+      let option = null
+      
+      if(Object.keys(users[authedUser].answers).includes(QId)){
+        viewPoolResults=true
+        option=users[authedUser].answers[QId]
+        console.log(option)
+      }
+      else{
+        viewPoolResults=false
+      }
+      return {
+        users,
+        questions,
+        authedUser,
+        viewPoolResults,
+        option,
+        noUser
+      }
+    }
   }
-  else{
-    viewPoolResults=false
-  }
-  return {
-    users,
-    questions,
-    authedUser,
-    viewPoolResults,
-    option,
-    noUser
-  }
-}
-}
 }
 
 export default connect(mapStateToProps)(PoolView) 

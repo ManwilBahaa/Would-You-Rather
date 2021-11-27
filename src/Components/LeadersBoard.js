@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom"
 import { connect } from 'react-redux'
 import React , { Component ,Fragment} from 'react'
 import Nav from './nav';
+import Login from "./Login";
 
 class LeadersBoard extends Component {
   render(){
@@ -25,11 +25,7 @@ if(this.props.noUser!==true){
     <Fragment>
       {
         this.props.noUser===true ? 
-        <p className='text-center'>
-        <Link to='/'>
-        login first
-        </Link>
-        </p>:
+        <Login/>:
         <Fragment>
         <Nav/>
         <hr></hr>

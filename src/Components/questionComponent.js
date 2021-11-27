@@ -3,14 +3,6 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 class Question extends Component{
 
-  handelView=(e)=>{
-    e.preventDefault()
-    
-    
-    //focus view on that particular question display both options
-    //
-  }
-
   render(){
     return(
       <div className="card mb-3"  key={this.props.question.timestamp} width="400px">
@@ -32,8 +24,8 @@ class Question extends Component{
               <Link to={'../question/'+this.props.id} color='white'>
                     <button type="button" id={this.props.id} className="btn btn-primary">
                               View Pool 
-                              
-                              </button></Link>
+                    </button>
+              </Link>
             </div>
           </div>
         </div>

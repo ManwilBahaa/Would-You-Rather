@@ -3,18 +3,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 import Dashboard from "./Dashboard"
 import Nav from "./nav"
-import { Link } from "react-router-dom"
+import Login from "./Login"
 class  HomePage extends Component{
   render(){
     return(
       <Fragment>
       {
       this.props.noUser===true ? 
-      <p className='text-center'>
-        <Link to='/'>
-        login first
-        </Link>
-        </p>:
+      <Login/>:
       <Fragment>
       <div>
           <Nav/>

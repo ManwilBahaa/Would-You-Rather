@@ -1,8 +1,8 @@
 import { Component ,Fragment} from "react"
 import React from 'react'
-//import { Link } from "react-router-dom"
 import { connect } from 'react-redux'
 import Question from "./questionComponent"
+import Login from "./Login"
 
 class  Dashboard extends Component{
   state={
@@ -18,9 +18,7 @@ class  Dashboard extends Component{
       <Fragment>
       {
       this.props.noUser===true ? 
-      <li className='text-center'>
-        login first
-        </li>:
+      <Login/>:
       <Fragment>
       <div className='container'>
             <ul className="nav nav-tabs">

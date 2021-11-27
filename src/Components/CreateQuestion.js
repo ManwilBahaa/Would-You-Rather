@@ -4,6 +4,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { handelAddQuestion } from "../actions/questions"
 import Nav from "./nav"
+import Login from "./Login"
 class  CreateQuestion extends Component{
   state={
     option1 :'',
@@ -50,9 +51,7 @@ class  CreateQuestion extends Component{
         {
         this.props.noUser===true ? 
         <p className='text-center'>
-        <Link to='/'>
-        login first
-        </Link>
+        <Login />
         </p>:
       <Fragment>
         <Nav/>
