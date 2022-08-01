@@ -57,7 +57,6 @@ if(this.props.noUser!==true){
                             </div>
                             <progress height='20px' value={question.optionOne.votes.length} max={Object.keys(users).length}></progress>
                             <p className="opacity-50">{question.optionOne.votes.length} of {Object.keys(users).length} votes --- {(question.optionOne.votes.length/Object.keys(users).length).toFixed(2)*100}%</p>
-                              
                   </div>
                   <br></br>
 
